@@ -1,0 +1,128 @@
+body {
+  font-family: 'Times New Roman', Times, Georgia, serif;
+  background: #efd6b9;
+  padding: 30px;
+  text-align: center;
+  color: #000000;
+}
+
+.form input, .form select, .form button {
+  margin: 8px;
+  padding: 8px 12px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: 1.5px solid #000000;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.form input:focus, .form select:focus {
+  border-color: #000000;
+}
+
+/* Make buttons stacked vertically and center */
+.form button {
+  background-color: #dfac8a;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  font-weight: 500;
+  display: block;
+  width: 150px;
+  margin: 10px auto 0;
+}
+
+.form button:hover {
+  background-color: #696969;
+}
+
+.popup {
+  display: none;
+  background-color: #ffdddd;
+  color: #a30000;
+  padding: 14px 20px;
+  border-left: 5px solid #ff4d4d;
+  border-radius: 8px;
+  font-weight: 600;
+  width: fit-content;
+  max-width: 80%;
+  margin: 20px auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  animation: fadeInOut 3s ease-in-out;
+}
+
+@keyframes fadeInOut {
+  0% { opacity: 0; transform: translateY(-10px); }
+  10% { opacity: 1; transform: translateY(0); }
+  90% { opacity: 1; }
+  100% { opacity: 0; transform: translateY(-10px); }
+}
+
+
+#scheduleDisplay {
+  margin-top: 30px;
+  background: rgb(253, 253, 253);
+  padding: 25px 40px;
+  display: inline-block;
+  border-radius: 15px;
+  box-shadow: 0 20px 30px rgba(0,0,0,0.1);
+  width: 420px;
+  text-align: left;
+}
+
+#scheduleDisplay h2 {
+  font-weight: 700;
+  border-bottom: 3px solid #007acc;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  font-size: 28px;
+}
+
+#scheduleList {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+#scheduleList li {
+  padding: 12px 16px;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  background: linear-gradient(135deg, #d5e28a 0%, #99ccff 100%);
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+  font-size: 17px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 500;
+}
+
+#scheduleList li span.day {
+  color: #000000;
+  font-weight: 600;
+  flex-basis: 20px;
+  
+}
+
+#scheduleList li span.time {
+  color: #000000;
+  font-weight: 500;
+  font-style: italic;
+  flex-basis: 100px;
+  text-align: left;
+}
+
+.delete-btn {
+  background: none;
+  border: none;
+  color: #db1414;
+  font-size: 15px;
+  cursor: pointer;
+  margin-left: 3px;
+  transition: transform 0.2s ease;
+}
+
+.delete-btn:hover {
+  transform: scale(1.2);
+  color: #ff0000;
+}
